@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #fff9fc;
+  background-image: radial-gradient(rgba(36, 27, 47, 0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+  color: #241b2f;
+  font-family: "JetBrains Mono", monospace;
+}
+
+::selection {
+  background: #ff4fa3;
+  color: white;
+}
+
+/* CRT scanline overlay, applied to specific terminal panels only */
+.crt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(36, 27, 47, 0.06) 0px,
+    rgba(36, 27, 47, 0.06) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  border-radius: inherit;
+}
+
+.pixel-corners {
+  clip-path: polygon(
+    0 8px, 8px 8px, 8px 0,
+    calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+}
+
+.retro-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.retro-scrollbar::-webkit-scrollbar-track {
+  background: #f0dceb;
+}
+.retro-scrollbar::-webkit-scrollbar-thumb {
+  background: #ff4fa3;
+  border: 2px solid #241b2f;
+}
+
+.retro-input {
+  width: 100%;
+  border: 2px solid #241b2f;
+  background: #fff9fc;
+  padding: 10px 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.95rem;
+  color: #241b2f;
+  outline: none;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.retro-input::placeholder {
+  color: rgba(36, 27, 47, 0.4);
+}
+.retro-input:focus {
+  box-shadow: 3px 3px 0px 0px rgba(62, 142, 255, 1);
+  transform: translate(-1px, -1px);
+}
