@@ -247,7 +247,12 @@ app.post("/api/calendar", async (req, res) => {
 
 app.get("/api/health", (_req, res) => res.json({ ok: true, model: GROQ_MODEL }));
 
-const PORT = process.env.PORT || 8787;
-app.listen(PORT, () => {
-  console.log(`🕹️  LaunchTwin API running on http://localhost:${PORT}`);
-});
+// Export for Vercel serverless (`api/index.js`). Only bind a port locally.
+export default app;
+
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 8787;
+  app.listen(PORT, () => {
+    console.log(`🕹️  LaunchTwin API running on http://localhost:${PORT}`);
+  });
+}

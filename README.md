@@ -58,4 +58,7 @@ npm run dev
 - This team repo deploys to Cloudflare Pages via push to `main`.
 - CI/CD test marker is in `index.html` to verify deploy updates.
 - On HackOnVibe domain, API calls default to `https://launch-twin.vercel.app/api` to keep generation working on static hosting.
+- Presentation files (bot-checked): `questionnaire.md` and `video_link.md` in repo root.
+- Demo video URL also mirrored at `docs/assets/demo-video-link.txt`.
+- Vercel must deploy the Express API (`api/index.js` + `vercel.json` rewrites). Set `GROQ_API_KEY` in Vercel → Settings → Environment Variables.
 - Do not commit real API keys.

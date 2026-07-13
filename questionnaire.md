@@ -10,11 +10,15 @@ Solo/indie mobile app founders — builders who need to promote their own launch
 
 **3. Which countries are the expected buyers of this service?**
 
-_(not provided)_
+Primary: United States, United Kingdom, Canada, India, Germany, Netherlands, Australia, and Singapore — English-first indie / mobile markets with strong App Store, Google Play, Product Hunt, Reddit, and X usage. Secondary expansion: other EU markets and Latin America where English-speaking indie founders ship globally.
 
 **4. Who are your competitors?**
 
-_(not provided)_
+- Generic AI chat (ChatGPT / Claude) used ad-hoc for launch copy — no persona pipeline, critique loop, or channel kit in one flow.
+- Marketing copy tools (Jasper, Copy.ai) — broad marketing copy, not indie-app launch simulation grounded in a specific user.
+- Launch templates / Notion kits and Product Hunt checklists — static checklists, no generated persona-grounded content.
+- Social schedulers (Buffer, Hootsuite) — publish/schedule only; they do not invent persona, discovery scenes, or critique.
+- Freelance marketers / agencies — higher cost and slower turnaround than a zero-budget solo workflow.
 
 **5. What is your advantage?**
 
